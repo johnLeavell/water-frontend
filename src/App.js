@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 // import { Route, Switch } from 'react-router-dom'
-import Navbar from './components/Navbar'
+import NavDrawer from './components/NavDrawer'
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       
       <div className="App">
-        <Navbar />
+        <NavDrawer />
 
       </div>
     );
