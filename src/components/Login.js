@@ -92,7 +92,7 @@ export default function Login() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            color="inherit"
+            // color="inherit"
           >
             Log In
           </Button>

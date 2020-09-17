@@ -1,12 +1,32 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Login from './components/Login';
-import NavDrawer from './components/NavDrawer'
+import NavDrawer from './components/NavDrawer';
+import Dashboard from './components/dashboard/Dashboard';
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      reports: [],
+    }
+  }
+  componentDidMount(){
+    this.fetchResults();
+  };
+
+  fetchResults(){
+    fetch('http://localhost:3000/results')
+    .then(resp => resp.json())
+    .then(data => {
+      this.setState({
+      reports: data
+      })
+    })
+  };
+
   render(){
     return (
       <>
@@ -25,8 +45,8 @@ class App extends Component {
           <div className="auth-wrapper">
             <div className="auth-inner">
               <Switch>
-                <Route exact path='/' component={Login} />
-                <Route path="/log-in" component={Login} />
+                <Route exact path='/' component={Dashboard} />
+                <Route path="/login" component={Login} />
               </Switch>
             </div>
           </div>
