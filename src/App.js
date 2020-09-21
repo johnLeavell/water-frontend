@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Login from './components/Login';
 import NavDrawer from './components/NavDrawer';
 import Dashboard from './components/dashboard/Dashboard';
-
+import ListResults from './components/ListResults';
 
 class App extends Component {
   constructor(props){
@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <>
       <NavDrawer />
+      <ListResults />
       <Router>
         <div className="App">
           <nav className="navbar navbar-expand-lg navbar-light fixed-top">
