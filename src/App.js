@@ -5,6 +5,7 @@ import Login from './components/Login';
 import NavDrawer from './components/NavDrawer';
 import Dashboard from './components/dashboard/Dashboard';
 import ListResults from './components/ListResults';
+import LineChart from './components/LineChart';
 
 class App extends Component {
   constructor(props){
@@ -48,6 +49,7 @@ class App extends Component {
               <Switch>
                 <Route exact path='/' component={Dashboard} />
                 <Route path="/login" component={Login} />
+                <Route path='/line-chart' component={LineChart} />
               </Switch>
             </div>
           </div>
