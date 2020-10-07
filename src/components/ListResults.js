@@ -5,8 +5,8 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Button from '@material-ui/core/Button';
-import CreateIcon from '@material-ui/icons/Create';
-import DeleteIcon from '@material-ui/icons/Delete';
+// import CreateIcon from '@material-ui/icons/Create';
+// import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 
 const API = 'http://localhost:3000/';
@@ -17,7 +17,6 @@ class ListResults extends Component {
     super(props)
     this.state = {
       results: [],
-      message: null
     }
   }
 
