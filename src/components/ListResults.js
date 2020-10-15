@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 // import CreateIcon from '@material-ui/icons/Create';
 // import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
 
 const API = 'http://localhost:3000/';
 const RESULTS = `${API}/results`
@@ -51,6 +52,7 @@ render() {
   console.log(this.state.results);
         return (
             <div>
+            <Container>
             <Typography variant="h4" style={style}>Sampling Results</Typography>
             <Button variant="contained" color="primary" onClick={() => this.addResult()}>
                 Add Result
@@ -89,6 +91,7 @@ render() {
                 ))}
               </TableBody>
             </Table>
+            </Container>
             </div>
         );
     }
