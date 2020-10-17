@@ -84,7 +84,7 @@ export default class SouthBranch extends Component {
     }
 
     render() {
-        console.log(this.state.locationWeather)
+        // console.log(this.state.locationWeather)
         return (
             <div>
                 <Container>
@@ -94,6 +94,7 @@ export default class SouthBranch extends Component {
                     <Typography>
                         5 day weather outlook
                     </Typography>
+                    <br/>
                     <SouthBranchWeather />
                     <br/>
                     <Typography variant="body1" gutterBottom>
