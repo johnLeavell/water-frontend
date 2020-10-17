@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import MainStemWeatherReport from './MainStemWeatherReport';
 
+
 import { Line } from 'react-chartjs-2';
 
 const data = {
@@ -23,20 +24,25 @@ const data = {
             pointRadius: 5,
             pointHitRadius: 10,
             data: [
-              { x: 65, y: 75 },
-              { x: 59, y: 49 },
-              { x: 80, y: 90 },
-              { x: 81, y: 29 },
-              { x: 56, y: 36 },
-              { x: 55, y: 25 },
-              { x: 40, y: 18 },
+              { x: 165, y: 375 },
+              { x: 359, y: 449 },
+              { x: 580, y: 590 },
+              { x: 681, y: 629 },
+              { x: 756, y: 636 },
+              { x: 855, y: 825 },
+              { x: 940, y: 918 },
+              { x: 165, y: 375 },
+              { x: 359, y: 449 },
+              { x: 580, y: 590 },
+              { x: 681, y: 629 },
+              { x: 756, y: 636 },
             ]
           }
         ]
       };
 
     
-    const API = `http://api.openweathermap.org/data/2.5/weather?lat=41.88858&lon=-87.624238&units=imperial&appid=b0efb34e8a9377dc5eaaff3184b94e0a`;
+
     // const RESULTS = `${API}/results`
     // const lat = 41.888580;
     // const long = -87.624238;
@@ -49,20 +55,20 @@ export default class MainStem extends Component {
         }
     }
     
-    componentDidMount = () => {
-        this.fetchCurrentWeatherData();    
-    }
+    // componentDidMount = () => {
+    //     this.fetchCurrentWeatherData();    
+    // }
     
-    fetchCurrentWeatherData = () => {
-        fetch(API)
-        .then( resp => resp.json())
-        .then( data => {
-            this.setState({
-                locationWeather: data
-            })
-        console.log(data.main.temp)
-    })
-    }
+    // fetchCurrentWeatherData = () => {
+    //     fetch(API)
+    //     .then( resp => resp.json())
+    //     .then( data => {
+    //         this.setState({
+    //             locationWeather: data
+    //         })
+    //     console.log(data.main.temp)
+    // })
+    // }
 
 
     

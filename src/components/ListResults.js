@@ -4,7 +4,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import Button from '@material-ui/core/Button';
+
 // import CreateIcon from '@material-ui/icons/Create';
 // import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
@@ -49,14 +49,10 @@ addResult(newResult) {
 }
 
 render() {
-  console.log(this.state.results);
         return (
             <div>
             <Container>
             <Typography variant="h4" style={style}>Sampling Results</Typography>
-            <Button variant="contained" color="primary" onClick={() => this.addResult()}>
-                Add Result
-            </Button>
             <Table>
               <TableHead>
                 <TableRow>

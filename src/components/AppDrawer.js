@@ -18,6 +18,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import GpsFixedIcon from '@material-ui/icons/GpsFixed';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
+// import OpacityIcon from '@material-ui/icons/Opacity';
+import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import { Link } from 'react-router-dom';
 
 
@@ -26,6 +28,7 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
   },
   link: {
     textDecoration: 'none', 
@@ -82,6 +85,12 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  title: {
+    flexGrow: 1,
+  },
+  toolbarButtons: {
+    marginLeft: 'auto',
+  },
 }));
 
 export default function AppDrawer() {
@@ -108,10 +117,10 @@ export default function AppDrawer() {
       >
         <Toolbar>
           <IconButton
+            edge='start'
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
           >
             <MenuIcon />
@@ -119,6 +128,13 @@ export default function AppDrawer() {
           <Typography variant="h6" noWrap>
             H2Now
           </Typography>
+          <div className={classes.toolbarButtons}>
+          <Link to='/login' className={classes.link}>
+          <IconButton color='inherit'>
+            <MeetingRoomIcon/>
+          </IconButton>
+          </Link>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -145,6 +161,14 @@ export default function AppDrawer() {
               <ListItemText primary='Home'/>
             </ListItem>
           </Link>
+          {/* <Link to='/list-results' className={classes.link} >
+            <ListItem button>
+              <ListItemIcon>
+                <OpacityIcon/>
+              </ListItemIcon>
+              <ListItemText primary='Sampling Results'/>
+            </ListItem>
+          </Link> */}
           <Link to='/about' className={classes.link} >
             <ListItem button>
               <ListItemIcon>
@@ -153,7 +177,6 @@ export default function AppDrawer() {
               <ListItemText primary='About'/>
             </ListItem>
           </Link>
-          
         </List>
         <Divider />
         

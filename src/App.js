@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
 
+
 import Login from './components/Login';
 import ListResults from './components/ListResults';
 import About from './components/About';
@@ -29,7 +30,7 @@ class App extends Component {
               <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} /> } />
                 <Route path="/login" component={Login} />
-                <Route path='/list-results' component={ListResults} />
+                <Route path='/list-results' render={ (props) => <ListResults {...props} /> }/>
                 <Route path='/about' render={ (props) => <About {...props} /> }/>
                 <Route exact path='/northbranch' render={ (props) => <NorthBranch {...props} /> }/>
                 <Route exact path='/southbranch' render={ (props) => <SouthBranch {...props} /> }/>
