@@ -4,72 +4,38 @@ import Typography from '@material-ui/core/Typography';
 
 import { Line } from 'react-chartjs-2';
 
-const data = {
-
-    labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    datasets: [
-        {
-            label: 'Main Stem Water Quality Data',
-            fill: false,
-            backgroundColor: 'rgba(75,192,192,0.4)',
-            pointBorderColor: 'rgba(75,192,192,1)',
-            pointBackgroundColor: '#fff',
-            pointBorderWidth: 1,
-            pointHoverRadius: 5,
-            pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-            pointHoverBorderColor: 'rgba(220,220,220,1)',
-            pointHoverBorderWidth: 2,
-            pointRadius: 5,
-            pointHitRadius: 10,
-            data: [
-              { x: 635, y: 745 },
-              { x: 242, y: 858 },
-              { x: 840, y: 960 },
-              { x: 831, y: 249 },
-              { x: 586, y: 326 },
-              { x: 575, y: 225 },
-              { x: 460, y: 158 },
-              { x: 635, y: 745 },
-              { x: 242, y: 858 },
-              { x: 840, y: 960 },
-              { x: 831, y: 249 },
-              { x: 586, y: 326 },
-            ]
-          }
-        ]
-      };
-
-    
-
-    // const RESULTS = `${API}/results`
-    // const lat = 41.888580;
-    // const long = -87.624238;
-
-export default class NorthBranch extends Component {
-    constructor(props) {
-        super(props)
+class NorthBranch extends Component {
+    constructor(){
+        super();
         this.state = {
-            locationWeather: [],
+            barChartData: []
         }
     }
-    
-    // componentDidMount = () => {
-    //     this.fetchCurrentWeatherData();    
-    // }
-    
-    // fetchCurrentWeatherData = () => {
-    //     fetch(API)
-    //     .then( resp => resp.json())
-    //     .then( data => {
-    //         this.setState({
-    //             locationWeather: data
-    //         })
-    //     console.log(data.main.temp)
-    // })
-    // }
 
+    componentDidMount(){
+        this.change0();
+    }
+
+    change0(){
+        this.setState({
+            barChartData:{
+                labels: ['January', 'Feburary', 'March',],
+                datasets: [
+                    {
+                        label: '3 Months',
+            backgroundColor: 'rgba(255,99,132,0.2)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+            hoverBorderColor: 'rgba(255,99,132,1)',
+            data: [65, 59, 80] 
+                    }
+                ]
+            }
+        })
+    }
     render() {
-        console.log(this.state.locationWeather.main)
+        // console.log(this.state.locationWeather.main)
         return (
             <div>
                 <Container>
@@ -82,9 +48,11 @@ export default class NorthBranch extends Component {
               <button />
               <button/>
               <button/>
-              <Line data={data} />
+              {/* <Line data={this.state.barChartData} /> */}
             </Container>
             </div>
         )
     }
 }
+
+export default NorthBranch;

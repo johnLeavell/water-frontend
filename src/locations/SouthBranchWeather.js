@@ -9,6 +9,10 @@ export default class SouthBranchWeather extends Component {
     }
 
     componentDidMount = () => {
+        this.getFiveDayOutlook()
+    }
+
+    getFiveDayOutlook = () => {
         const weatherURL = `http://api.openweathermap.org/data/2.5/forecast?zip=60608&lat=41.88858&lon=-87.624238&units=imperial&appid=${weatherApi.openWeatherApiKey}`;
 
         fetch(weatherURL)

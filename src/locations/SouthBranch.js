@@ -68,6 +68,7 @@ export default class SouthBranch extends Component {
         this.fetchCurrentWeatherData();    
     }
     
+   
     fetchCurrentWeatherData = () => {
         fetch(WEATHERAPI)
         .then( resp => resp.json())
@@ -77,6 +78,7 @@ export default class SouthBranch extends Component {
             })
         })
     }
+
 
     renderLocationData = () => {
         const { temp } = this.state.locationWeather
