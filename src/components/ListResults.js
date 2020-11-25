@@ -56,8 +56,8 @@ render() {
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Id</TableCell>
-                  <TableCell>Date</TableCell>
+                  <TableCell align="right">Id</TableCell>
+                  <TableCell align="right">Date</TableCell>
                   <TableCell align="right">Time</TableCell>
                   <TableCell align="right">Temp</TableCell>
                   <TableCell align="right">Stage</TableCell>

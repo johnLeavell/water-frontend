@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
-import { Line } from 'react-chartjs-2';
+// import { Line } from 'react-chartjs-2';
 
 class NorthBranch extends Component {
     constructor(){

@@ -8,8 +8,8 @@ import About from './components/About';
 import Home from './components/Home';
 import AppDrawer from './components/AppDrawer';
 import NorthBranch from './locations/NorthBranch';
-import SouthBranch from './locations/SouthBranch'
-import MainStem from './locations/MainStem'
+import SouthBranch from './locations/SouthBranch';
+import MainStem from './locations/MainStem';
 
 
 class App extends Component {
