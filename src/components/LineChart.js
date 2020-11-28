@@ -72,31 +72,16 @@ export default class LineChart extends Component {
             });
             this.setState({
                 chartData: {
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Septenber', 'October', 'November', 'December'],
+                    labels: date,
                     datasets: [
                         {
-                            label: 'Water Quality',
+                            label: 'Tryptophan',
                             data: tryp,
-                            backgroundColor: [
-                                "rgba(255, 99, 132, 0.6)",
-                                "rgba(54, 162, 235, 0.6)",
-                                "rgba(255, 99, 132, 0.6)"
-              
-                            ],
                         }
                     ]
                 }
             })
-            // console.log(time);
-            // let tryp = coin.forEach(ele =>{
-            //     data.push(ele.tryp)
-            // } )
-
-            // let coliform = []
-            // coin.forEach(ele => {
-            //     coliform.push(ele.coil_coll_100ml)
-            // })
-            // console.log(tryp);
+           
         })
     }
 
@@ -119,7 +104,9 @@ export default class LineChart extends Component {
                         }
                     }}
                 />
+                <button></button>
                 <h4>line Chart</h4>
+                <button/>
             </div>
         )
     }
@@ -199,3 +186,24 @@ export default class LineChart extends Component {
 //         }
 //     ]
 // }
+
+
+
+ // console.log(time);
+            // let tryp = coin.forEach(ele =>{
+            //     data.push(ele.tryp)
+            // } )
+
+            // let coliform = []
+            // coin.forEach(ele => {
+            //     coliform.push(ele.coil_coll_100ml)
+            // })
+            // console.log(tryp);
+
+
+             // backgroundColor: [
+                            //     // "rgba(255, 99, 132, 0.6)",
+                            //     // "rgba(54, 162, 235, 0.6)",
+                            //     // "rgba(255, 99, 132, 0.6)"
+              
+                            // ],

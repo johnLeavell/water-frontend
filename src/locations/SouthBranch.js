@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import ListResults from '../components/ListResults'
+// import ListResults from '../components/ListResults'
 // import { Line } from 'react-chartjs-2';
 import SouthBranchWeather from './SouthBranchWeather';
 import weatherApiKey from '../apiKeys';
 import LineChart from '../components/LineChart'
+import Grid from '@material-ui/core/Grid'
 
 
 const WEATHERAPI = `http://api.openweathermap.org/data/2.5/weather?lat=41.88858&lon=-87.624238&units=imperial&appid=${weatherApiKey.openWeatherApiKey}`;
@@ -55,9 +56,7 @@ export default class SouthBranch extends Component {
                     <Typography variant="body1" gutterBottom>
                     South Branch Data
                     </Typography>
-                    <button />
-                    <button/>
-                    <ListResults/>
+                    {/* <ListResults/> */}
             </Container>
             </div>
         )
