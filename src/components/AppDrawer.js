@@ -181,14 +181,14 @@ export default function AppDrawer() {
         <Divider />
         
         <List>
-          <Link to='/northbranch' className={classes.link}>
+          {/* <Link to='/northbranch' className={classes.link}>
           <ListItem button>
             <ListItemIcon>
               <GpsFixedIcon/> 
             </ListItemIcon>
             <ListItemText primary='North Branch' />
         </ListItem>
-        </Link>
+        </Link> */}
 
         <Link to='/southbranch' className={classes.link}>
         <ListItem button>
