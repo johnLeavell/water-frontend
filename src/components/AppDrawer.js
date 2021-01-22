@@ -126,7 +126,7 @@ export default function AppDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            H2Now
+            H2Quality Now
           </Typography>
           <div className={classes.toolbarButtons}>
           <Link to='/login' className={classes.link}>
@@ -181,14 +181,14 @@ export default function AppDrawer() {
         <Divider />
         
         <List>
-          {/* <Link to='/northbranch' className={classes.link}>
+          <Link to='/northbranch' className={classes.link}>
           <ListItem button>
             <ListItemIcon>
               <GpsFixedIcon/> 
             </ListItemIcon>
             <ListItemText primary='North Branch' />
         </ListItem>
-        </Link> */}
+        </Link>
 
         <Link to='/southbranch' className={classes.link}>
         <ListItem button>

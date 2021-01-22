@@ -54,7 +54,24 @@ export default class MainStem extends Component {
             locationWeather: [],
         }
     }
+    
+    // componentDidMount = () => {
+    //     this.fetchCurrentWeatherData();    
+    // }
+    
+    // fetchCurrentWeatherData = () => {
+    //     fetch(API)
+    //     .then( resp => resp.json())
+    //     .then( data => {
+    //         this.setState({
+    //             locationWeather: data
+    //         })
+    //     console.log(data.main.temp)
+    // })
+    // }
 
+
+    
     render() {
         console.log(this.state.locationWeather.main)
         return (

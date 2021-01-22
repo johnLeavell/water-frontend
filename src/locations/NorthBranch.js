@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
+// import { Line } from 'react-chartjs-2';
+
 class NorthBranch extends Component {
     constructor(){
         super();
@@ -46,6 +48,7 @@ class NorthBranch extends Component {
               <button />
               <button/>
               <button/>
+              {/* <Line data={this.state.barChartData} /> */}
             </Container>
             </div>
         )
