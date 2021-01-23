@@ -18,7 +18,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import GpsFixedIcon from '@material-ui/icons/GpsFixed';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
-// import OpacityIcon from '@material-ui/icons/Opacity';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import { Link } from 'react-router-dom';
 
@@ -111,10 +110,7 @@ export default function AppDrawer() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open,
-        })}
-      >
+        className={clsx(classes.appBar, {[classes.appBarShift]: open,})} >
         <Toolbar>
           <IconButton
             edge='start'
@@ -161,14 +157,6 @@ export default function AppDrawer() {
               <ListItemText primary='Home'/>
             </ListItem>
           </Link>
-          {/* <Link to='/list-results' className={classes.link} >
-            <ListItem button>
-              <ListItemIcon>
-                <OpacityIcon/>
-              </ListItemIcon>
-              <ListItemText primary='Sampling Results'/>
-            </ListItem>
-          </Link> */}
           <Link to='/about' className={classes.link} >
             <ListItem button>
               <ListItemIcon>
@@ -226,11 +214,3 @@ export default function AppDrawer() {
     </div>
   );
 }
-
-
-// {['Home', 'Water Quality', 'Login', 'About'].map((text, index) => (
-//   <ListItem button key={text}>
-//     <ListItemIcon>{index % 2 === 0 ? <CropSquareIcon /> : <CropSquareIcon />}</ListItemIcon>
-//     <ListItemText primary={text} />
-//   </ListItem>
-// ))}

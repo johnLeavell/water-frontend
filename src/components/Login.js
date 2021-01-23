@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
-
 import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-
 class Login extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      username: '',
-      password: '',
-      loggedIn: false
-    }
+  
+  state = {
+    username: '',
+    password: '',
   }
 
   handleChange = e => {
@@ -29,12 +24,10 @@ class Login extends Component {
     this.setState({
       username: '',
       password: '',
-      loggedIn: true
     })
     this.props.history.push('/dashboard')
   }
 
-  
   render(){
     return (
       <Container component="main" maxWidth="xs">

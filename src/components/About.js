@@ -9,7 +9,7 @@ export default function About() {
                 About
               </Typography>
               <Typography variant="body1" gutterBottom>
-              Water quality app is a tool for informing the public of the water quailty levels along the Chicago River.
+                Water quality app is a tool for informing the public of the water quailty levels along the Chicago River.
               </Typography>
             </Container>
         </div>

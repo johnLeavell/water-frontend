@@ -1,0 +1,15 @@
+.southbranch-weather {
+  padding: 5px;
+  width: 200;
+  height: 150;
+  margin-top: 10;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}

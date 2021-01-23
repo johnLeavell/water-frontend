@@ -4,9 +4,6 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-
-// import CreateIcon from '@material-ui/icons/Create';
-// import DeleteIcon from '@material-ui/icons/Delete';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
@@ -14,45 +11,28 @@ const API = 'http://localhost:3000/';
 const RESULTS = `${API}/results`
 
 class ListResults extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      results: [],
-    }
+  
+  state = {
+    results: [],
   }
 
-componentDidMount() {
-  this.loadResultList();
-}
+  componentDidMount() {
+    this.loadResultList();
+  }
 
-loadResultList = () => {
-  fetch(RESULTS)
-  .then(res => res.json())
-  .then(results => {
-    this.setState({results: results})
-  })
-}
+  loadResultList = () => {
+    fetch(RESULTS)
+    .then(res => res.json())
+    .then(results => {
+      this.setState({results: results})
+    })
+  }
 
-deleteResult = resultId => {
-  // const reqObj = {
-  //   method: 'DELETE'
-  // }
-  // fetch(`{}`)
-}
-
-editResult(id) {
-
-}
-
-addResult(newResult) {
-
-}
-
-render() {
-        return (
-            <div>
-            <Container>
-            <Typography variant="h4" style={style}>Sampling Results</Typography>
+  render() {
+    return (
+      <div>
+        <Container>
+          <Typography variant="h4" style={style}>Sampling Results</Typography>
             <Table>
               <TableHead>
                 <TableRow>
