@@ -28,10 +28,11 @@ export default class SouthBranchWeather extends Component {
     }
 
     getDayCards = () => {
-        return this.state.dailyData.map((reading, index) => <SouthBranchDay reading={reading} key={index} />)
+        return this.state.dailyData.map((reading) => 
+            <SouthBranchDay reading={reading} key={reading.id} />
+        )
     }
-
-
+    
     render() {
         return (
             <div>

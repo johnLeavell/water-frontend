@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
-
-
 import Login from './components/Login';
 import ListResults from './components/ListResults';
 import About from './components/About';
@@ -11,14 +9,7 @@ import NorthBranch from './locations/NorthBranch';
 import SouthBranch from './locations/SouthBranch';
 import MainStem from './locations/MainStem';
 
-
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-
-    }
-  }
 
   render(){
     return (
@@ -26,7 +17,6 @@ class App extends Component {
       <Router>
         <div>
         <AppDrawer/>
-
               <Switch>
               <Route exact path='/' render={ (props) => <Home {...props} /> } />
                 <Route path="/login" component={Login} />

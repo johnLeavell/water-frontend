@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import MainStemWeatherReport from './MainStemWeatherReport';
-
-
 import { Line } from 'react-chartjs-2';
 
 const data = {
@@ -41,37 +38,12 @@ const data = {
         ]
       };
 
-    
-
-    // const RESULTS = `${API}/results`
-    // const lat = 41.888580;
-    // const long = -87.624238;
-
 export default class MainStem extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            locationWeather: [],
-        }
+   
+    state = {
+        locationWeather: [],
     }
-    
-    // componentDidMount = () => {
-    //     this.fetchCurrentWeatherData();    
-    // }
-    
-    // fetchCurrentWeatherData = () => {
-    //     fetch(API)
-    //     .then( resp => resp.json())
-    //     .then( data => {
-    //         this.setState({
-    //             locationWeather: data
-    //         })
-    //     console.log(data.main.temp)
-    // })
-    // }
 
-
-    
     render() {
         console.log(this.state.locationWeather.main)
         return (
@@ -82,16 +54,9 @@ export default class MainStem extends Component {
                     </Typography>
                     <Typography variant="body1" gutterBottom>
                     Main Stem Data
-              </Typography>
-              <button />
-              <button/>
-              <button/>
-              <Line data={data} />
-            </Container>
-            <Container>
-                <MainStemWeatherReport props={this.state}/>
-                
-            </Container>
+                    </Typography>
+                    <Line data={data} />
+                </Container>
             </div>
         )
     }

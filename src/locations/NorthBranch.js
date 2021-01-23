@@ -5,37 +5,12 @@ import Typography from '@material-ui/core/Typography';
 // import { Line } from 'react-chartjs-2';
 
 class NorthBranch extends Component {
-    constructor(){
-        super();
-        this.state = {
-            barChartData: []
-        }
+    
+    state = {
+        barChartData: []
     }
 
-    componentDidMount(){
-        this.change0();
-    }
-
-    change0(){
-        this.setState({
-            barChartData:{
-                labels: ['January', 'Feburary', 'March',],
-                datasets: [
-                    {
-                        label: '3 Months',
-            backgroundColor: 'rgba(255,99,132,0.2)',
-            borderColor: 'rgba(255,99,132,1)',
-            borderWidth: 1,
-            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-            hoverBorderColor: 'rgba(255,99,132,1)',
-            data: [65, 59, 80] 
-                    }
-                ]
-            }
-        })
-    }
     render() {
-        // console.log(this.state.locationWeather.main)
         return (
             <div>
                 <Container>
@@ -43,13 +18,9 @@ class NorthBranch extends Component {
                         North Branch
                     </Typography>
                     <Typography variant="body1" gutterBottom>
-                    North Branch Data
-              </Typography>
-              <button />
-              <button/>
-              <button/>
-              {/* <Line data={this.state.barChartData} /> */}
-            </Container>
+                        North Branch Data
+                    </Typography>
+                </Container>
             </div>
         )
     }

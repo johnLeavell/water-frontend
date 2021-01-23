@@ -15,36 +15,9 @@ export default class LineChart extends Component {
 
     componentDidMount(){
         this.getChartData();
-        // this.getAyyakadata();
     }
 
-    // getAyyakadata() {
-    //     var RestapiService = require('restapi_service');
-    //     var defaultClient = RestapiService.ApiClient.instance;
-        
-    //     // Configure API key authorization: jwt_header_Authorization
-    //     var jwt_header_Authorization = defaultClient.authentications['jwt_header_Authorization'];
-    //     jwt_header_Authorization.apiKey = "0E9574538CE2453E8308D8DAACBD9890"
-    //     // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //     //jwt_header_Authorization.apiKeyPrefix['Authorization'] = "Token"
-        
-    //     var api = new RestapiService.DeviceApi()
-        
-    //     var authorization = authorization_example; // {String} JWT used for authentication
-        
-        
-    //     var callback = function(error, data, response) {
-    //       if (error) {
-    //         console.error(error);
-    //       } else {
-    //         console.log('API called successfully. Returned data: ' + data);
-    //       }
-    //     };
-    //     api.deviceGetAllDevices(authorization, callback);
-        
-    //     console.log(this.getAyyakadata)
 
-    // }
     getChartData(){
         fetch(RESULTS)
         .then(res => res.json())
