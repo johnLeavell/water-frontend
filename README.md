@@ -11,9 +11,9 @@ Water quality app created with Reactjs
 	
 ## Technologies
 Project is created with:
-* Javascript ES6+
-* Webpack + Babel
-* Fetch requests to the mealDB API https://www.themealdb.com/api.php
+* 
+* 
+* 
 	
 ## Setup
 To run this project, install it locally using npm:
